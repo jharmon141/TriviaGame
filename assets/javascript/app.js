@@ -139,7 +139,6 @@ $(document).ready(function() {
 
     //displays the questions and answers
     function displayQuestion(){
-      $("#questionArea").empty();
       //start timer
       timer();
       //display question
@@ -162,6 +161,7 @@ $(document).ready(function() {
     function displayAnswer(){
       //empty the question area
       $("#questionArea").hide();
+      $("#questionArea").empty();
 
       //display if
 

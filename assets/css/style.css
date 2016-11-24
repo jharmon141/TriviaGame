@@ -1,11 +1,11 @@
 @font-face {
   font-family: Space Age;
-  src: url("../font/space age.ttf")
+  src: url("../font/space age.ttf");
 }
 
 @font-face {
   font-family: Free Pixel;
-  src: url("../font/FreePixel.ttf")
+  src: url("../font/FreePixel.ttf");
 }
 
 body {
