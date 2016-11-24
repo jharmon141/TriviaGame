@@ -157,6 +157,7 @@ $(document).ready(function() {
 
 
 
+
     //displays the answer screen
     function displayAnswer(){
       //empty the question area
