@@ -70,9 +70,15 @@ a {
   display: inline-block;
 }
 
-#startButton:hover{
+#startButton:hover {
   background-color: #ff00f7;
   color: black;
+  cursor: pointer;
+}
+
+#startButton:focus {
+  background-color: #red;
+  color: red;
   cursor: pointer;
 }
 
@@ -89,6 +95,10 @@ a {
 
 #answers {
   font-size: 30px;
+}
+
+.incorrect {
+  color: red;
 }
 
 li:hover{

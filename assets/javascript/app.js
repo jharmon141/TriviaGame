@@ -3,58 +3,58 @@ $(document).ready(function() {
     //questions object
     var questions = {
         question1: {
-            question: "question1 filler",
+            question: "The film 'Bladerunner' was based on which book by Phillip K. Dick?",
             answers: {
-                answer1: "answer1string",
-                answer2: "answer2",
+                answer1: "Do Androids Dream of Electric Sheep?",
+                answer2: "V.A.L.I.S.",
                 answer3: "answer3",
                 answer4: "answer4",
             },
-            //correctanswer: this.answers.answer1,
+            correctanswer: "Do Androids Dream of Electric Sheep?",
             imageURL: "assets/images/example.jpg",
         },
         question2: {
             question: "question2 filler",
             answers: {
-                answer1: "answer",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "answer1",
+                answer2: "answer2",
+                answer3: "answer3",
+                answer4: "answer4blah",
             },
-            //correctanswer: this.answers.answer4,
+            correctanswer: "answer4blah",
             imageURL: "assets/images/example.jpg",
         },
         question3: {
             question: "question3 filler",
             answers: {
-                answer1: "answer",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "answer1",
+                answer2: "answer2",
+                answer3: "answer3",
+                answer4: "answer4",
             },
-            //correctanswer: this.answers.answer3,
+              correctanswer: "answer3",
             imageURL: "assets/images/example.jpg",
         },
         question4: {
             question: "question4 filler",
             answers: {
-                answer1: "answer",
+                answer1: "answer1",
                 answer2: "answer",
                 answer3: "answer",
                 answer4: "answer",
             },
-            //correctanswer: this.answers.answer1,
+            correctanswer: "answer1",
             imageURL: "assets/images/example.jpg",
         },
         question5: {
             question: "question5 filler",
             answers: {
                 answer1: "answer",
-                answer2: "answer",
+                answer2: "answer2",
                 answer3: "answer",
                 answer4: "answer",
             },
-            //correctanswer: this.answers.answer2,
+            correctanswer: "answer2",
             imageURL: "assets/images/example.jpg",
         },
         question6: {
@@ -63,31 +63,31 @@ $(document).ready(function() {
                 answer1: "answer",
                 answer2: "answer",
                 answer3: "answer",
-                answer4: "answer",
+                answer4: "answer4",
             },
-            //correctanswer: this.answers.answer4,
+            correctanswer: "answer4",
             imageURL: "assets/images/example.jpg",
         },
         question7: {
             question: "question7 filler",
             answers: {
-                answer1: "answer",
+                answer1: "answer1",
                 answer2: "answer",
                 answer3: "answer",
                 answer4: "answer",
             },
-            //correctanswer: this.answers.answer1,
+            correctanswer: "answer1",
             imageURL: "assets/images/example.jpg",
         },
         question8: {
             question: "question8 filler",
             answers: {
                 answer1: "answer",
-                answer2: "answer",
+                answer2: "answer2",
                 answer3: "answer",
                 answer4: "answer",
             },
-            //correctanswer: this.answers.answer2,
+            correctanswer: "answer2",
             imageURL: "assets/images/example.jpg",
         },
         question9: {
@@ -96,9 +96,9 @@ $(document).ready(function() {
                 answer1: "answer",
                 answer2: "answer",
                 answer3: "answer",
-                answer4: "answer",
+                answer4: "answer4",
             },
-            //correctanswer: this.answers.answer4,
+            correctanswer: "answer4",
             imageURL: "assets/images/example.jpg",
         },
         question10: {
@@ -106,18 +106,22 @@ $(document).ready(function() {
             answers: {
                 answer1: "answer",
                 answer2: "answer",
-                answer3: "answer",
+                answer3: "answer3",
                 answer4: "answer",
             },
-            //correctanswer: this.answers.answer3,
+            correctanswer: "answer3",
             imageURL: "assets/images/example.jpg",
         },
     };
+
+    var answerCorrect = "none";
+    var text = "";
 
     var questionsArr = [questions.question1, questions.question2, questions.question3, questions.question4, questions.question5, questions.question6, questions.question7, questions.question8, questions.question9, questions.questions10];
 
     //timer function
     var seconds;
+
 
     var timer = function() {
         //reset timer
@@ -129,42 +133,87 @@ $(document).ready(function() {
             seconds--;
             if (seconds === 0) {
                 clearInterval(runTimer);
+                displayAnswer();
             }
             $("#counter").html("<p>" + "Time Remaing: "+ seconds + "</p>");
+
+            if (answerCorrect === "true" || answerCorrect === "false"){
+                clearInterval(runTimer);
+            }
+
         }, 1000);
+
+
     };
 
-    //keeps track of which question
+    //keeps track of current question set
     var questionCount = 0;
 
     //displays the questions and answers
     function displayQuestion(){
+
+      $("#answerArea").hide();
       //start timer
       timer();
+
+      //clear correctanswer
+      answerCorrect = "none";
+      console.log(answerCorrect);
+
       //display question
+      $("#questionArea").show();
       $("#question").html(questionsArr[questionCount].question);
+
       //display answers
-      var text = "";
       for (var x in questionsArr[questionCount].answers){
         if(questionsArr[questionCount].answers.hasOwnProperty(x)){
-        text = questionsArr[questionCount].answers[x];
-        $("#answers").append("<li>" + text + "</li>");
+          text = questionsArr[questionCount].answers[x];
+          $("#answers").append("<li>" + text + "</li>");
+            //labels correct answer
+            if (text === questionsArr[questionCount].correctanswer){
+              $("li").attr('id', 'correctanswer');
+          }
         }
       }
 
-      setTimeout(displayAnswer, 30000);
+
+      //when user chooses an answer
+      $("li").click(function(){
+
+        //check if answer
+        if ($(this).is("#correctanswer")) {
+          answerCorrect = "true";
+        } else {
+          answerCorrect = "false";
+        }
+
+        displayAnswer();
+
+      });
     }
-
-
 
 
     //displays the answer screen
     function displayAnswer(){
-      //empty the question area
+      //hide the question area
+      $("#answers").empty();
       $("#questionArea").hide();
-      $("#questionArea").empty();
+      $("#answerArea").show();
 
-      //display if
+      if (answerCorrect === "true"){
+        $("#choiceCheck").removeClass("incorrect").html("<h1>&#10003; Correct</h1> ");
+        $("#correctAnswer").html("<h3>" + 'The answer was '  + questionsArr[questionCount].correctanswer + "</h3>");
+      } else if (answerCorrect === "false"){
+        $("#choiceCheck").addClass("incorrect").html("<h1>X Incorrect</h1>");
+        $("#correctAnswer").html("<h3>" + 'The answer was '  + questionsArr[questionCount].correctanswer + "</h3>");
+      } else {
+        $("#choiceCheck").addClass("incorrect").html("<h1>Out of Time!</h1>");
+        $("#correctAnswer").html("<h3>" + 'The answer was '  + questionsArr[questionCount].correctanswer + "</h3>");
+      }
+
+      questionCount ++;
+
+      setTimeout(displayQuestion, 5000);
 
     }
 
@@ -176,10 +225,6 @@ $(document).ready(function() {
       $("#startDisplayArea").hide();
       //loop through our questions and display time, quesitons, answers for 30 seconds or until an answer is clicked
       displayQuestion();
-
-        //when answer chosen or timer reaches zero move to next interation
-
-        //function that renders correct/incorrect screen
 
 
       //end screen
