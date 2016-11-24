@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Space Age;
+  src: url("../font/space age.ttf")
+}
+
+@font-face {
+  font-family: Free Pixel;
+  src: url("../font/FreePixel.ttf")
+}
+
+body {
+  font-family: Space Age;
+  font-weight: bolder;
+  background-image: url("../../assets/images/wallup-107057.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  height: 125px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 120px;
+  padding-top: 30px;
+  margin-top: 0;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  background: url("../images/matrix.gif") repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background-image: url("../images/mars-planet-mountain.jpg");
+  background-size: cover;
+}
+
+#game {
+  height: 400px;
+  background: rgba(128,128,128,0.5);
+  margin-top: 90px;
+  margin-bottom: 105px;
+  color: lime;
+  font-family: Free Pixel;
+}
+
+
+#startDisplayArea {
+  -webkit-animation: type 5s;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 110px;
+}
+
+#counter {
+    font-size: 20px;
+    text-align: right;
+}
+
+#question {
+  font-size: 40px;
+  margin-top: 40px;
+}
+
+#answers {
+  font-size: 30px;
+}
+
+
+span{
+  animation: blink 1s infinite;
+}
+
+
+@keyframes blink{
+  to{opacity: .0;}
+}
