@@ -1,11 +1,11 @@
 @font-face {
   font-family: Space Age;
-  src: url("../font/space age.ttf");
+  src: url("../Font/space age.ttf");
 }
 
 @font-face {
   font-family: Free Pixel;
-  src: url("../font/FreePixel.ttf");
+  src: url("../Font/FreePixel.ttf");
 }
 
 body {
@@ -53,7 +53,27 @@ body {
   -webkit-animation: type 5s;
   font-size: 30px;
   text-align: center;
-  padding-top: 110px;
+  padding-top: 75px;
+}
+
+#startButton {
+  text-decoration: none;
+  color: lime;
+  background-color: black;
+  margin-top: 40px;
+  padding: 10px;
+  width: 20%;
+}
+
+a {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+#startButton:hover{
+  background-color: #ff00f7;
+  color: black;
+  cursor: pointer;
 }
 
 #counter {
@@ -63,11 +83,18 @@ body {
 
 #question {
   font-size: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #answers {
   font-size: 30px;
+}
+
+li:hover{
+  background-color: #ff00f7;
+  color: black;
+  cursor: pointer;
 }
 
 
