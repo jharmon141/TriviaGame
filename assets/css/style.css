@@ -61,8 +61,36 @@ body {
   color: lime;
   background-color: black;
   margin-top: 40px;
-  padding: 10px;
+  padding: 7px;
   width: 20%;
+}
+
+
+#resetButton {
+  text-decoration: none;
+  color: lime;
+  background-color: black;
+  margin-top: 40px;
+  padding: 7px;
+  width: 25%;
+  text-align: center;
+  font-size: 28px;
+}
+
+#endScreen h1 {
+  padding-bottom: 20px;
+}
+
+#resetButton:hover {
+  background-color: #ff00f7;
+  color: black;
+  cursor: pointer;
+}
+
+#resetButton:focus {
+  background-color: #red;
+  color: red;
+  cursor: pointer;
 }
 
 a {
@@ -82,13 +110,21 @@ a {
   cursor: pointer;
 }
 
+#answerPic img{
+  padding-top: 20px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #counter {
     font-size: 20px;
     text-align: right;
 }
 
 #question {
-  font-size: 40px;
+  font-size: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
