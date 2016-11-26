@@ -307,7 +307,6 @@ $(document).ready(function() {
 
     //light saber hover effect
     var audio = new Audio("assets/audio/Hum 2.wav");
-    var audioB = new Audio("assets/audio/button-15.wav");
 
     function saberPlay(){
       audio.play();
