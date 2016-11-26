@@ -3,7 +3,7 @@ $(document).ready(function() {
     //questions object
     var questions = {
         question1: {
-            question: "The film 'Bladerunner' was based on which book by Philip K. Dick?",
+            question: "The movie 'Bladerunner' was based on which book by Philip K. Dick?",
             answers: {
                 answer1: "Strangers in a Strange Land",
                 answer2: "V.A.L.I.S.",
@@ -14,107 +14,108 @@ $(document).ready(function() {
             imageURL: "assets/images/doandroids.jpg",
         },
         question2: {
-            question: "question2 filler",
+            question: "In 'Star Treck', what is the name of the Klingon home world?",
             answers: {
-                answer1: "answer1",
-                answer2: "answer2",
-                answer3: "answer3",
-                answer4: "answer4blah",
+                answer1: "Gorkon",
+                answer2: "Klingonia",
+                answer3: "Anacreon",
+                answer4: "Qo'noS",
             },
-            correctanswer: "answer4blah",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Qo'noS",
+            imageURL: "assets/images/qo_nos_scene___with_praxis_by_vjeko1701-d6ir5tc.jpg",
         },
         question3: {
-            question: "question3 filler",
+            question: "In 'Foundation' by Isaac Assimov, who develops phsychohistory?",
             answers: {
-                answer1: "answer1",
-                answer2: "answer2",
-                answer3: "answer3",
-                answer4: "answer4",
+                answer1: "Jasper Olivaw",
+                answer2: "Conrad Arflane",
+                answer3: "Hari Seldon",
+                answer4: "Elric of Melnibone",
             },
-            correctanswer: "answer3",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Hari Seldon",
+            imageURL: "assets/images/Hari-seldon.jpg",
         },
         question4: {
-            question: "question4 filler",
+            question: "In Arthru C. Clarke's 'Childhood's End', the aliens look like...",
             answers: {
-                answer1: "answer1",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "Frogs",
+                answer2: "Devels",
+                answer3: "Skeletons",
+                answer4: "Humans",
             },
-            correctanswer: "answer1",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Devels",
+            imageURL: "assets/images/KarellenChildhoodsEnd.jpg",
         },
         question5: {
-            question: "question5 filler",
+            question: "Flash Gordon's main enemy was named...",
             answers: {
-                answer1: "answer",
-                answer2: "answer2",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "Kane the Betrayer",
+                answer2: "Graal the Fearsome",
+                answer3: "Tiriac the Cruel",
+                answer4: "Ming the Merciless",
             },
-            correctanswer: "answer2",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Ming the Merciless",
+            imageURL: "assets/images/86b34311784aad7bc3f2726450220ff0.jpg",
         },
         question6: {
-            question: "question6 filler",
+            question: "Orson Scott Card is the only author to win both Hugo and Nebula awards two years in a row. The first year was for 'Ender's Game' the second year was for...",
             answers: {
-                answer1: "answer",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer4",
+                answer1: "Ender's Shadow",
+                answer2: "Xenocide",
+                answer3: "Speaker for the Dead",
+                answer4: "Ender in Exile",
             },
-            correctanswer: "answer4",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Speaker for the Dead",
+            imageURL: "assets/images/Speaker_dead_cover.jpg",
         },
         question7: {
-            question: "question7 filler",
+            question: "In the movie Close Encounters of the Third Kind, what did a man build a model of out of mashed potatoes?",
             answers: {
-                answer1: "answer1",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "A space ship",
+                answer2: "A mountain",
+                answer3: "A laser gun",
+                answer4: "An alien being",
             },
-            correctanswer: "answer1",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "A mountain",
+            imageURL: "assets/images/794840436_CWxjf-M.png",
         },
         question8: {
-            question: "question8 filler",
+            question: "In 'The Time Machine' by H.G. Wells, the main character encounters these two human species in the future.",
             answers: {
-                answer1: "answer",
-                answer2: "answer2",
-                answer3: "answer",
-                answer4: "answer",
+                answer1: "Eloi & Morlock",
+                answer2: "Eloi & Balrog",
+                answer3: "Balrog & Morlock",
+                answer4: "Balrog & Cytharian",
             },
-            correctanswer: "answer2",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Eloi & Morlock",
+            imageURL: "assets/images/1803311-morlock1.jpg",
         },
         question9: {
-            question: "question9 filler",
+            question: "Who wrote & directed the horrible yet entertaining movie Plan 9 From Outer Space?",
             answers: {
-                answer1: "answer",
-                answer2: "answer",
-                answer3: "answer",
-                answer4: "answer4",
+                answer1: "Steven Spielberg",
+                answer2: "Ed Wood",
+                answer3: "George Lucas",
+                answer4: "Roland Emmerich",
             },
-            correctanswer: "answer4",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Ed Wood",
+            imageURL: "assets/images/Plan_9_Alternative_poster.jpg",
         },
         question10: {
-            question: "question10 filler",
+            question: "In the 'X-Files' who was Fox Moulder's first secret informant?",
             answers: {
-                answer1: "answer",
-                answer2: "answer",
-                answer3: "answer3",
-                answer4: "answer",
+                answer1: "Deep Throat",
+                answer2: "Alex Krycek",
+                answer3: "Mr. X",
+                answer4: "Well-Manicured Man",
             },
-            correctanswer: "answer3",
-            imageURL: "assets/images/example.jpg",
+            correctanswer: "Deep Throat",
+            imageURL: "assets/images/Deep_Throat_and_Fox_Mulder_meet_on_a_sports_track.jpg",
         },
     };
 
     $("#endScreen").hide();
+    $("#startButton").hide();
 
     //set variables
     var answerCorrect = "none";
@@ -130,7 +131,7 @@ $(document).ready(function() {
 
     var timer = function() {
         //reset timer
-        seconds = 30;
+        seconds = 20;
         //diplay timer
         $("#counter").html("<p>" + "Time Remaing: " + seconds + "</p>");
         //run timer
@@ -225,18 +226,20 @@ $(document).ready(function() {
         questionCount++;
 
         if (questionCount > questionsArr.length -1){
-          setTimeout(displayEndScreen, 5000);
+          setTimeout(displayEndScreen, 4000);
         } else {
-          setTimeout(displayQuestion, 5000);
+          setTimeout(displayQuestion, 4000);
         }
     }
 
     function displayEndScreen(){
+
       //hide the question area
       $("#answers").empty();
       $("#questionArea").hide();
       $("#answerArea").hide();
       $("#counter").hide();
+      $("#resetButton").hide();
 
       //show end screen
       $("#endScreen").show();
@@ -251,6 +254,9 @@ $(document).ready(function() {
       //display results
       $("#score").html("<h3>Correct Answers: " + correctAnswers + "</h3>" + "<h3>Incorrect Answers: " + incorrectAnswers + "</h3>" + "<h3>Unanswered: " + unansweredAnswers + "</h3>");
 
+      //reset button delayed fade in
+      setTimeout(showResetButton, 3000);
+
     }
 
     //reset game function
@@ -264,6 +270,7 @@ $(document).ready(function() {
 
       $("#endScreen").hide();
       displayQuestion();
+      $("#counter").show();
     }
 
     //user begins game with click
@@ -280,5 +287,38 @@ $(document).ready(function() {
     $("#resetButton").click(function(){
       resetGame();
     });
+
+    $('#startText').typeIt({
+     speed: 60,
+     autoStart: false,
+     cursor: false,
+    });
+
+
+    function showStartButton(){
+      $("#startButton").show();
+    }
+
+    function showResetButton(){
+      $("#resetButton").show();
+    }
+
+    setTimeout(showStartButton, 7350);
+
+    //light saber hover effect
+    var audio = new Audio("assets/audio/Hum 2.wav");
+    var audioB = new Audio("assets/audio/button-15.wav");
+
+    function saberPlay(){
+      audio.play();
+    }
+
+    function saberPause(){
+      audio.pause();
+    }
+
+
+    $("#startButton").hover(saberPlay, saberPause);
+    $("#resetButton").hover(saberPlay, saberPause);
 
 });

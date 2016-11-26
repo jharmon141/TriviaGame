@@ -5,6 +5,8 @@
 	<title>Sci-Fi Trivia!</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.2.3/typeit.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -23,9 +25,11 @@
 				<div id="counter" class="row"></div>
 
 				<div id="startDisplayArea">
-					<p>Welcome to Sci-Fi Trivia!</p>
-					<p>You have 30 seconds to answer each question.</p>
-					<p>Press Start to begin.<span>|</span></p>
+					<div id="startText">
+						<p>Welcome to Sci-Fi Trivia!</p>
+						<p>You have 20 seconds to answer each question.</p>
+						<p>Press Start to begin.</p>
+					</div>
 					<a id="startButton">Start</a>
 				</div>
 
