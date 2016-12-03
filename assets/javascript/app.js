@@ -25,7 +25,7 @@ $(document).ready(function() {
             imageURL: "assets/images/qo_nos_scene___with_praxis_by_vjeko1701-d6ir5tc.jpg",
         },
         question3: {
-            question: "In 'Foundation' by Isaac Assimov, who develops phsychohistory?",
+            question: "In 'Foundation' by Isaac Assimov, what character develops phsychohistory?",
             answers: {
                 answer1: "Jasper Olivaw",
                 answer2: "Conrad Arflane",
@@ -36,7 +36,7 @@ $(document).ready(function() {
             imageURL: "assets/images/Hari-seldon.jpg",
         },
         question4: {
-            question: "In Arthur C. Clarke's 'Childhood's End', the aliens look like...",
+            question: "In Arthur C. Clarke's 'Childhood's End', the aliens resemble...",
             answers: {
                 answer1: "Frogs",
                 answer2: "Devels",
@@ -69,7 +69,7 @@ $(document).ready(function() {
             imageURL: "assets/images/Speaker_dead_cover.jpg",
         },
         question7: {
-            question: "In the movie Close Encounters of the Third Kind, what did a man build a model of out of mashed potatoes?",
+            question: "In the movie Close Encounters of the Third Kind, what did Richard Dreyfuss's character build a model of out of mashed potatoes?",
             answers: {
                 answer1: "A space ship",
                 answer2: "A mountain",
