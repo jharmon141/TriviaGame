@@ -36,7 +36,7 @@ $(document).ready(function() {
             imageURL: "assets/images/Hari-seldon.jpg",
         },
         question4: {
-            question: "In Arthru C. Clarke's 'Childhood's End', the aliens look like...",
+            question: "In Arthur C. Clarke's 'Childhood's End', the aliens look like...",
             answers: {
                 answer1: "Frogs",
                 answer2: "Devels",
