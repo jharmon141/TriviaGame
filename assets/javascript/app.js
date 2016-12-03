@@ -58,7 +58,7 @@ $(document).ready(function() {
             imageURL: "assets/images/86b34311784aad7bc3f2726450220ff0.jpg",
         },
         question6: {
-            question: "Orson Scott Card is the only author to win both Hugo and Nebula awards two years in a row. The first year was for 'Ender's Game' the second year was for...",
+            question: "Orson Scott Card is the only author to win both Hugo and Nebula awards in two consecutive years. He won in 1985 for 'Ender's Game' and in 1986 for...",
             answers: {
                 answer1: "Ender's Shadow",
                 answer2: "Xenocide",
