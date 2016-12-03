@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //questions object
+    //questions
     var questions = {
         question1: {
             question: "The movie 'Bladerunner' was based on which book by Philip K. Dick?",
@@ -130,10 +130,13 @@ $(document).ready(function() {
     var seconds;
 
     var timer = function() {
+
         //reset timer
         seconds = 20;
+
         //diplay timer
         $("#counter").html("<p>" + "Time Remaing: " + seconds + "</p>");
+
         //run timer
         var runTimer = setInterval(function() {
             seconds--;
@@ -152,7 +155,7 @@ $(document).ready(function() {
 
     };
 
-    //displays the questions and answers
+    //displays the questions and answer choices
     function displayQuestion() {
 
         $("#answerArea").hide();
@@ -166,7 +169,7 @@ $(document).ready(function() {
         $("#questionArea").show();
         $("#question").html(questionsArr[questionCount].question);
 
-        //display answers
+        //display answer choices
         for (var key in questionsArr[questionCount].answers) {
 
             if (questionsArr[questionCount].answers.hasOwnProperty(key)) {
@@ -177,9 +180,10 @@ $(document).ready(function() {
             }
         }
 
-        //when user chooses an answer
+        //user selects an answer
         $("li").click(function() {
 
+          //lets program know which answer choice is correct
           $( "li" ).each(function( index ) {
             if ($(this).text() === questionsArr[questionCount].correctanswer){
                 $(this).attr('id', 'correctanswer');
@@ -200,7 +204,8 @@ $(document).ready(function() {
 
     //displays the answer screen
     function displayAnswer() {
-        //hide the question area
+
+        //hide the question area and show the answer area
         $("#answers").empty();
         $("#questionArea").hide();
         $("#answerArea").show();
@@ -211,11 +216,13 @@ $(document).ready(function() {
             $("#choiceCheck").removeClass("incorrect").html("<h1>&#10003; Correct</h1> ");
             $("#correctAnswer").html("<h3>" + 'The answer was ' + questionsArr[questionCount].correctanswer + "</h3>");
             correctAnswers++;
+
         //if incorrect answer is chosen
         } else if (answerCorrect === "false") {
             $("#choiceCheck").addClass("incorrect").html("<h1>X Incorrect</h1>");
             $("#correctAnswer").html("<h3>" + 'The answer was ' + questionsArr[questionCount].correctanswer + "</h3>");
             incorrectAnswers++;
+
         //if time runs out
         } else {
             $("#choiceCheck").addClass("incorrect").html("<h1>Out of Time!</h1>");
@@ -225,6 +232,7 @@ $(document).ready(function() {
 
         questionCount++;
 
+        //when the end is reached display end screen else proceed to next question
         if (questionCount > questionsArr.length -1){
           setTimeout(displayEndScreen, 4000);
         } else {
@@ -241,7 +249,7 @@ $(document).ready(function() {
       $("#counter").hide();
       $("#resetButton").hide();
 
-      //show end screen
+      //show end screen and display results
       $("#endScreen").show();
       if (correctAnswers > 6){
         $("#howYouDid").html("<h1>You did great! Nerd on!</h1>");
@@ -251,7 +259,7 @@ $(document).ready(function() {
         $("#howYouDid").html("<h1>OUCH! You need to hit the books!</h1>");
       }
 
-      //display results
+      //display score
       $("#score").html("<h3>Correct Answers: " + correctAnswers + "</h3>" + "<h3>Incorrect Answers: " + incorrectAnswers + "</h3>" + "<h3>Unanswered: " + unansweredAnswers + "</h3>");
 
       //reset button delayed fade in
@@ -315,7 +323,6 @@ $(document).ready(function() {
     function saberPause(){
       audio.pause();
     }
-
 
     $("#startButton").hover(saberPlay, saberPause);
     $("#resetButton").hover(saberPlay, saberPause);
