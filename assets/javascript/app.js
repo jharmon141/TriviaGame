@@ -39,7 +39,7 @@ $(document).ready(function() {
             question: "In Arthur C. Clarke's 'Childhood's End', the aliens resemble...",
             answers: {
                 answer1: "Frogs",
-                answer2: "Devels",
+                answer2: "Devils",
                 answer3: "Skeletons",
                 answer4: "Humans",
             },
@@ -102,7 +102,7 @@ $(document).ready(function() {
             imageURL: "assets/images/Plan_9_Alternative_poster.jpg",
         },
         question10: {
-            question: "In the 'X-Files' who was Fox Moulder's first secret informant?",
+            question: "In the 'X-Files' who was Fox Mulder's first secret informant?",
             answers: {
                 answer1: "Deep Throat",
                 answer2: "Alex Krycek",
@@ -159,6 +159,7 @@ $(document).ready(function() {
     function displayQuestion() {
 
         $("#answerArea").hide();
+        
         //start timer
         timer();
 
