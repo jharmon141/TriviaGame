@@ -43,7 +43,7 @@ $(document).ready(function() {
                 answer3: "Skeletons",
                 answer4: "Humans",
             },
-            correctanswer: "Devels",
+            correctanswer: "Devils",
             imageURL: "assets/images/KarellenChildhoodsEnd.jpg",
         },
         question5: {
